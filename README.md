@@ -6,6 +6,7 @@ Fetch tweets as per given #hash tags that have at least one re-tweet.
 
 * PHP 5.6 or Greater
 * Nginx
+* Redis
 
 
 ## Installation
