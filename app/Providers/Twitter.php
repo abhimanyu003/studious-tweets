@@ -33,10 +33,10 @@ class Twitter
     public function searchTweets()
     {
         // Fetch tweets based in query sting.
-        $fields = '?q=#custserv&count=50';
+        $fields = sprintf('?q=%s&count=50', $this->config['search']['hash']);
         if (isset($_GET['value'])) {
             $this->value = $_GET['value'];
-            $fields = sprintf('?q=#custserv&count=50&max_id=%s', $this->value);
+            $fields = sprintf('?q=%s&count=50&max_id=%s', $this->config['search']['hash'], $this->value);
         }
 
         // Get cached tweets if no cached tweet found fetch the new one.
@@ -67,7 +67,7 @@ class Twitter
         // Loop over every object
         foreach ($tweets->statuses as $tweet) {
             // Ignore tweet which has same ID as that of last tweet fetched.
-            if ($tweet->retweet_count >= 1 and $tweet->id != $id) {
+            if ($tweet->retweet_count >= $this->config['search']['fav_count'] and $tweet->id != $id) {
                 $status = [
                     'id'                => (string)$tweet->id,
                     'username'          => $tweet->user->name,
