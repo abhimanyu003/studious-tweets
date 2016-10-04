@@ -15,10 +15,10 @@ return [
      * Twitter Settings
      */
     'twitter'     => [
-        'oauth_access_token'        => '140728479-iVoH3yEgkgLnQuN28ECBuY5Cc3OYEJdPM6eaLMNN',
-        'oauth_access_token_secret' => 'pJgzXEW25kd1mx5cCiBcQFtx6nJJPkv0jDoeC2JFoziFD',
-        'consumer_key'              => 'MNdPavJlejJ8V3xAtnO8tKcbl',
-        'consumer_secret'           => 'hpNVXLEoGMthPHZN1OS1BlYJukDzGOgwEFzQEaQco79anAbH4i'
+        'oauth_access_token'        => '',
+        'oauth_access_token_secret' => '',
+        'consumer_key'              => '',
+        'consumer_secret'           => ''
     ],
 
     /**
