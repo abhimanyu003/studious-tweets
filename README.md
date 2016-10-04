@@ -16,6 +16,12 @@ Fetch tweets as per given #hash tags that have at least one re-tweet.
 * Create new app at https://apps.twitter.com/app/
 * Provide the API keys `app/Config/Config.php`
 
+## Configuration
+
+* Open `app/Config/Config.php`
+* Set `hash` and `min_retweet` accordingly.
+
+
 ## Disabling Redis Cache.
 
 
@@ -28,7 +34,7 @@ If you want to disable redis cache simply open `app/Config/Config.php` and chang
 ```
 
 
-## Build Using
+## Built Using
 
 * PHP 5.6
 * [nikic/FastRoute](https://github.com/nikic/FastRoute)
@@ -48,7 +54,7 @@ You can configure your `nginx` routing like this.
     }
 ```
 
-## Adding New Page
+## Adding New Custom Page
 
 * Open `index.php`
 * Specify the routing url and method to execute.
